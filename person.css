@@ -1,0 +1,85 @@
+html {
+  --body-width: 5px;
+  --shoulder-width: 50px;
+}
+.person-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transform: scale(0.75);
+}
+.person {
+  background: tomato;
+  visibility: hidden;
+}
+.head {
+  background: transparent;
+  font-size: 80px;
+}
+.neck,
+.arm,
+.torso {
+  width: var(--body-width);
+}
+.neck {
+  height: var(--body-width);
+}
+.shoulders,
+.midsection,
+.legs-section {
+  display: flex;
+}
+.shoulder {
+  width: var(--shoulder-width);
+  height: var(--body-width);
+}
+.shoulder.left {
+  border-top-left-radius: var(--body-width);
+  transform: skew(15deg, -15deg);
+}
+.shoulder.right {
+  transform: skew(15deg, 15deg);
+  border-top-right-radius: var(--body-width);
+}
+.arm {
+  height: 90px;
+}
+.midsection {
+  width: calc(2 * var(--shoulder-width));
+  justify-content: space-between;
+}
+.torso {
+  transform: translate(0, -2px);
+  height: 150px;
+}
+.leg {
+  background: transparent;
+}
+.leg .upper,
+.leg .lower {
+  background: tomato;
+  width: calc(1.5 * var(--shoulder-width));
+  height: var(--body-width);
+}
+.leg.right {
+  transform: rotate(60deg);
+  transform-origin: left;
+}
+.leg.left {
+  transform: rotate(-60deg);
+  transform-origin: right;
+}
+.leg.left .lower {
+  transform-origin: top left;
+  transform: rotate(140deg);
+}
+.leg.right .lower {
+  transform-origin: top right;
+  transform: rotate(140deg);
+}

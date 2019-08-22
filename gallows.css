@@ -1,0 +1,78 @@
+body {
+  background: tomato;
+}
+* {
+  box-sizing: border-box; /* padding goes on the inside of the box */
+  /* if you say width 100px it will always be 100px */
+  margin: 0;
+}
+body {
+  height: 100vh;
+}
+.word-container {
+  margin-top: 1em;
+  height: 2em;
+  font-family: system-ui;
+  font-size: 2em;
+}
+.letter-input {
+  font-size: 2em;
+  width: 10em;
+}
+.gallowsContainer {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.gallows {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  width: 350.3px;
+  height: 600px;
+  background: aliceblue;
+  box-shadow: 5px 7px 20px 7px #00000080;
+  perspective: 1000px;
+}
+.rope {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 20%;
+  border: 3px dashed hsla(30, 50%, 30%, 1);
+}
+.pole {
+  background: slategray;
+  position: absolute;
+  left: 0;
+  z-index: 99999;
+}
+.pole.top {
+  height: 10px;
+  width: 50%;
+}
+.pole.side {
+  height: 97%;
+  width: 10px;
+}
+.pole.side::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  height: calc(100% - 10px);
+  width: 2px;
+}
+.platform {
+  height: 100px;
+  width: 100%;
+  background: hsl(23, 63%, 31%);
+  bottom: 0;
+  position: absolute;
+  transform: rotateX(80deg);
+  margin-bottom: -30px;
+}

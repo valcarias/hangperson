@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="gallows.css" />
+  <link rel="stylesheet" href="person.css" />
+</head>
+
+<body>
+  <!-- make a gallows -->
+  <!-- (secretly) make the person -->
+  <!-- progressively un-hide the person -->
+
+  <!-- gallows -->
+  <div class="gallowsContainer">
+    <div class="gallows">
+      <div class="rope"></div>
+      <div class="pole top"></div>
+      <div class="pole side"></div>
+      <div class="platform"></div>
+
+      <div class="person-container">
+        <div class="person head">😢</div>
+        <div class="person neck"></div>
+        <div class="shoulders">
+          <!-- HTML Tag wrap extension! -->
+          <div class="person shoulder left"></div>
+          <div class="person shoulder right"></div>
+        </div>
+        <div class="midsection">
+          <div class="person arm left"></div>
+          <div class="person torso"></div>
+          <div class="person arm right"></div>
+        </div>
+        <div class="legs-section">
+          <div class="person leg left">
+            <div class="upper"></div>
+            <div class="lower"></div>
+          </div>
+          <div class="person leg right">
+            <div class="upper"></div>
+            <div class="lower"></div>
+          </div>
+        </div>
+        <div class="person foot left"></div>
+        <div class="person foot right"></div>
+      </div>
+    </div>
+    <div class="word-container"></div>
+
+    <input class="letter-input" type="text" />
+
+    <div class="lives-remaining">💗💗💗💗💗💗💗💗💗</div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
